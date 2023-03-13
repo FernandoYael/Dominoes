@@ -1,20 +1,16 @@
 ﻿class Domino
 {
-    public int l1;
-    public int l2;
-    public Domino (int L1,int L2)
+    public int d1;
+    public int d2;
+    public Domino (int d1,int d2)
     {
-        L1=l1;
-        L2=l2;
+        this.d1=d1;
+        this.d2=d2;
     }
-    public void Dominoes (int d1, int d2)
+    public static int operator + (Domino a, Domino b)
     {
-        this.l1=d1;
-        this.l2=d2;
-    }
-    public static Domino operator +(Domino a, Domino b)
-    {
-        int total=a.l1+a.l2+b.l1+b.l2;
+        int total=a.d1+a.d2+b.d1+b.d2;
+        return total;
     }
 }
 
@@ -27,5 +23,6 @@ internal class Program
         Domino d1= new Domino (1,1);
         Domino d2= new Domino (2,2);
         int total=d1+d2;
+        Console.WriteLine(total);
     }
 }
