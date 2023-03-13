@@ -7,9 +7,14 @@
         L1=l1;
         L2=l2;
     }
+    public void Dominoes (int d1, int d2)
+    {
+        this.l1=d1;
+        this.l2=d2;
+    }
     public static Domino operator +(Domino a, Domino b)
     {
-        D
+        int total=a.l1+a.l2+b.l1+b.l2;
     }
 }
 
